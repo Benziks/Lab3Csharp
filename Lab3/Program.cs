@@ -81,13 +81,13 @@ namespace Lessons
 
             for (int i = 0; i < ArrayOfIntegers.GetLength(0); i++)
             {
-                int sum = 0;
+                double sum = 0;
                 for (int j = 0; j < ArrayOfIntegers.GetLength(1); j++)
                 {
                     sum += ArrayOfIntegers[i, j];
 
                 }
-                int average = sum / ArrayOfIntegers.GetLength(1);
+                double average = sum / ArrayOfIntegers.GetLength(1);
 
                 if (average > maxAverage)
                 {
@@ -96,8 +96,8 @@ namespace Lessons
                 }
 
             }
-            Console.WriteLine("Максимальное среднеарифметическое значение на строке: " + maxRow);
-            Console.WriteLine("Среднее арифметическое чисел в строке:" + maxAverage);
+            Console.WriteLine("Максимальное среднеарифметическое значение на строке: " + (maxRow + 1));
+            Console.WriteLine("Среднее арифметическое чисел в строке:" + Math.Round(maxAverage,2));
 
         }
         static void Task919()
